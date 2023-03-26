@@ -23,7 +23,7 @@ const lorem = [
 
 const mappedLorem = lorem.map((value, index) => {
   return (
-    <Link key={index} href={"/"}>
+    <Link key={index} href={"/1"}>
       <div className="border-b-2 m-3 p-2">
         <h3 className="text-center">{value}</h3>
       </div>
