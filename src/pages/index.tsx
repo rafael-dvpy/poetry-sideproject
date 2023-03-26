@@ -1,10 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import Layout from "@/components/Layout";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
 const lorem = [
   "Lorem Ipsum",
@@ -27,9 +23,11 @@ const lorem = [
 
 const mappedLorem = lorem.map((value, index) => {
   return (
-    <div className="border-b-2 m-3 p-2" key={index}>
-      <h3 className="text-center">{value}</h3>
-    </div>
+    <Link key={index} href={"/"}>
+      <div className="border-b-2 m-3 p-2">
+        <h3 className="text-center">{value}</h3>
+      </div>
+    </Link>
   );
 });
 
